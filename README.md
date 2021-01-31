@@ -8,7 +8,7 @@ Most other actor frameworks use some form of `dyn Any`, which is basically telli
 
 Instead of using dynamic dispatch, we generate and enum that contains all possible types of messages an actor will handle. This is done automagically through a derive macro, and is handeled behind-the-scenes, so you technically never have to use the generated enum in your code (see example below).
 
-```rs
+```Rust
 use chikatetsu::prelude::*;
 
 #[derive(PartialEq, Debug)]
