@@ -61,3 +61,10 @@ async fn main() {
     assert_eq!(SubtractResult(-1), actor.send(Subtract(1, 2)).await);
 }
 ```
+
+## Caveats
+Currently, all message and reply types must be valid enum names, so no primitives or paths. Simple workarounds include using a type alias. A permanent fix would be to allow custom names in the attributes, but I'm bad at macros so that'll take a while.
+
+Also, the generated enums cannot be renamed at the moment.
+
+If you use this (please don't), definitely report any issues you face (or even better, make a PR).
