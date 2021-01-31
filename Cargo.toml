@@ -1,14 +1,16 @@
 [package]
 name = "chikatetsu"
-description = "An actor framework for Tokio"
+description = "An(other) actor framework for Tokio"
 version = "0.1.0"
 authors = ["EthanYidong <ethanyidong@gmail.com>"]
 edition = "2018"
+license = "MIT"
+repository = "https://github.com/EthanYidong/chikatetsu"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-chikatetsu-macros = { path = "macros" }
+chikatetsu-macros = { version = "0.1", path = "macros" }
 
 tokio = { features = ["full"], version = "1" }
 async-trait = "0.1"
